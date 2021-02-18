@@ -65,3 +65,6 @@ function deleteTickets() {
         getTickets(); // get tickets and update webpage
     })
 }
+
+// get tickets on load
+getTickets();
