@@ -3,7 +3,7 @@ function validateForm(form) {
     if (!form.checkValidity()) { // if form is not valid
         form.classList.add('was-validated');
     } else {
-        form.reset();
+        // form.reset();
         form.classList.remove('was-validated');
     }
 }
@@ -13,19 +13,18 @@ function submitForm(event) {
     // prevent default form behaviour
     event.preventDefault();
     const form = $('#form')[0];
-    console.log(form);
 
     // form validation
     validateForm(form);
 
     // make new ticket
     const ticket = {
-        fname: $("#fornavn"),
-        lname: $("#etternavn"),
-        phone: $("#tlf"),
-        mail: $("#mail"),
-        movie: $("#movie"),
-        amount: $("#amount"),
+        fname: $("#fname").val(),
+        lname: $("#lname").val(),
+        phone: $("#phone").val(),
+        mail: $("#mail").val(),
+        movie: $("#movie").val(),
+        amount: $("#amount").val(),
     }
 
     // POST ticket to the server
@@ -57,6 +56,7 @@ function formatTickets(tickets) {
             </tr>
         `
     }
+    return ut;
 }
 
 // Delete all tickets

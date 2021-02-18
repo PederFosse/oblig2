@@ -17,6 +17,9 @@
     <!--js imports-->
     <script type="application/javascript" src="./index.js"></script>
 
+    <!--Style-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
     <!--
     Color scheme
 
@@ -26,81 +29,95 @@
     Night Blue Shadow: #12343b
     -->
 </head>
-<body class="container" style="background-color: #e1b382">
-    <div class="row mt-5">
-        <div class="col-12 col-md-5">
+<body class="container">
+    <div class="row mt-3">
+        <div class="col-12">
             <h1>Bestilling av kinobiletter</h1>
             <form id="form" class="form" novalidate>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="fornavn" class="form-label">Fornavn</label>
-                        <input type="text" id="fornavn" required class="form-control"/>
+                        <label for="fname" class="form-label">Fornavn</label>
+                        <input type="text" id="fname" required class="form-control"/>
                         <div class="invalid-feedback">Du må fylle inn et fornavn</div>
                     </div>
                     <div class="col">
-                        <label for="etternavn" class="form-label">Etternavn</label>
-                        <input type="text" id="etternavn" required class="form-control"/>
+                        <label for="lname" class="form-label">Etternavn</label>
+                        <input type="text" id="lname" required class="form-control"/>
                         <div class="invalid-feedback">Du må fylle inn et etternavn</div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="tlf" class="form-label">Telefonnr</label>
-                        <input type="text" id="tlf" required class="form-control"/>
+                        <label for="phone" class="form-label">Telefonnr</label>
+                        <input type="text" id="phone" required class="form-control"/>
                         <div class="invalid-feedback">Du må fylle inn et telefonnr</div>
                     </div>
                     <div class="col">
-                        <label for="epost" class="form-label">Epost</label>
-                        <input type="text" id="epost" required class="form-control"/>
+                        <label for="mail" class="form-label">Epost</label>
+                        <input type="text" id="mail" required class="form-control"/>
                         <div class="invalid-feedback">Du må fylle inn epost adresse</div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <label for="film" class="form-label">Velg film:</label>
-                        <select name="film" id="film" required class="form-select">
-                            <option value="Batman">21 Jump Street</option>
-                            <option value="Batman">22 Jump Street</option>
-                            <option value="Batman">23 Jump Street: Medical School</option>
-                            <option value="Batman">24 Jump Street: Foreign Exchange Students</option>
-                            <option value="Batman">25 Jump Street: A Semester At Sea</option>
-                            <option value="Batman">26 Jump Street: Art School</option>
-                            <option value="Batman">27 Jump Street: Culinary School</option>
-                            <option value="Batman">28 Jump Street: Veterinary School</option>
-                            <option value="Batman">29 Jump Street: Sunday School</option>
-                            <option value="Batman">30 Jump Street: Flight Academy</option>
-                            <option value="Batman">31 Jump Street: Ninja Academy</option>
-                            <option value="Batman">32 Jump Street: Fireman School</option>
-                            <option value="Batman">33 Jump Street: Generations</option>
-                            <option value="Batman">34 Jump Street: Return of the Ghost</option>
-                            <option value="Batman">35 Jump Street: Traffic School</option>
-                            <option value="Batman">36 Jump Street: Military School</option>
-                            <option value="Batman">37 Jump Street: Scuba Class</option>
-                            <option value="Batman">38 Jump Street: Dance Academy</option>
-                            <option value="Batman">39 Jump Street: The Electronic Target Game</option>
-                            <option value="Batman">40 Jump Street: Retirement Home</option>
-                            <option value="Batman">41 Jump Street: Magic School</option>
-                            <option value="Batman">42 Jump Street: Beauty School</option>
-                            <option value="Batman">43 Jump Street: Mariachi School</option>
-                            <option value="Batman">2121 Jump Street</option>
-                            <option value="Batman">Infinity Jump Street</option>
+                        <label for="movie" class="form-label">Velg film:</label>
+                        <select name="movie" id="movie" required class="form-select">
+                            <option value="21 Jump Street">21 Jump Street</option>
+                            <option value="22 Jump Street">22 Jump Street</option>
+                            <option value="23 Jump Street: Medical School">23 Jump Street: Medical School</option>
+                            <option value="24 Jump Street: Foreign Exchange Students">24 Jump Street: Foreign Exchange Students</option>
+                            <option value="25 Jump Street: A Semester At Sea">25 Jump Street: A Semester At Sea</option>
+                            <option value="26 Jump Street: Art School">26 Jump Street: Art School</option>
+                            <option value="27 Jump Street: Culinary School">27 Jump Street: Culinary School</option>
+                            <option value="28 Jump Street: Veterinary School">28 Jump Street: Veterinary School</option>
+                            <option value="29 Jump Street: Sunday School">29 Jump Street: Sunday School</option>
+                            <option value="30 Jump Street: Flight Academy">30 Jump Street: Flight Academy</option>
+                            <option value="31 Jump Street: Ninja Academy">31 Jump Street: Ninja Academy</option>
+                            <option value="32 Jump Street: Fireman School">32 Jump Street: Fireman School</option>
+                            <option value="33 Jump Street: Generations">33 Jump Street: Generations</option>
+                            <option value="34 Jump Street: Return of the Ghost">34 Jump Street: Return of the Ghost</option>
+                            <option value="35 Jump Street: Traffic School">35 Jump Street: Traffic School</option>
+                            <option value="36 Jump Street: Military School">36 Jump Street: Military School</option>
+                            <option value="37 Jump Street: Scuba Class">37 Jump Street: Scuba Class</option>
+                            <option value="38 Jump Street: Dance Academy">38 Jump Street: Dance Academy</option>
+                            <option value="39 Jump Street: The Electronic Target Game">39 Jump Street: The Electronic Target Game</option>
+                            <option value="40 Jump Street: Retirement Home">40 Jump Street: Retirement Home</option>
+                            <option value="41 Jump Street: Magic School">41 Jump Street: Magic School</option>
+                            <option value="42 Jump Street: Beauty School">42 Jump Street: Beauty School</option>
+                            <option value="43 Jump Street: Mariachi School">43 Jump Street: Mariachi School</option>
+                            <option value="2121 Jump Street">2121 Jump Street</option>
+                            <option value="Infinity Jump Street">Infinity Jump Street</option>
                         </select>
                     </div>
                     <div class="col-6">
-                        <label for="antall" class="form-label">Antall billetter</label>
-                        <input type="number" id="antall" required class="form-control">
+                        <label for="amount" class="form-label">Antall billetter</label>
+                        <input type="number" id="amount" required class="form-control">
                         <div class="invalid-feedback">Du må fylle inn antall billetter</div>
                     </div>
                 </div>
                 <input type="submit" value="Bestill billetter" class="btn btn-primary" onclick="submitForm(event)">
             </form>
         </div>
-        <div class="col-md-7 col-12 mt-md-0 mt-5">
+        <div class="col-12 mt-5">
             <div style="display: flex; align-items: center; justify-content: space-between">
                 <h1>Alle billetter</h1>
                 <button onClick="deleteTickets()" class="btn btn-danger">Slett alle billetter</button>
             </div>
-            <table class="table" id="alleBilletter"></table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Fornavn</th>
+                    <th>Etternavn</th>
+                    <th>Telefonnummer</th>
+                    <th>E-post</th>
+                    <th>Film</th>
+                    <th>Antall billetter</th>
+                </tr>
+                </thead>
+                <tbody id="ticketTable">
+
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
